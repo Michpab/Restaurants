@@ -7,22 +7,25 @@
 
 
 //  GET /places
-  router.get('/', (req, res) => {
+router.get('/new', (req, res) => {
+  res.render('places/new',{places})
+})
+
     let places = [{
       name: 'H-Thai-ML',
       city: 'Seattle',
       state: 'WA',
       cuisines: 'Thai, Pan-Asian',
-      pic: 'http://placekitten.com/250/250'
+      pic: '/images/images.jpeg4.jpeg'
     }, {
-      name: 'Coding Cat Cafe',
-      city: 'Phoenix',
-      state: 'AZ',
-      cuisines: 'Coffee, Bakery',
-      pic: 'http://placekitten.com/250/250'
+        name: 'Coding Cat Cafe',
+        city: 'Phoenix',
+        state: 'AZ',
+        cuisines: 'Coffee, Bakery',
+        pic: '/images/images.jpeg3.jpeg'
     }]
-   res.render('places/index', { places }) 
-   })
+    // res.render('places/index', { places }) 
+  //  })
 
 
 // app.get('/', (req, res) => {
