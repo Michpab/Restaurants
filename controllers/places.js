@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const places = require('../models/places.js')
+const places = require('./models/places.js')
 
 router.get('/', (req, res) => {
     res.render('places/index', { places })
@@ -13,23 +13,10 @@ router.get('/', (req, res) => {
 
 
 //  GET /places
-// router.get('/new', (req, res) => {
-  // res.render('places/new',{places})
-// })
+router.get('/new', (req, res) => {
+res.render('places/new',{places})
+})
 
-    let places = [{
-      name: 'H-Thai-ML',
-      city: 'Seattle',
-      state: 'WA',
-      cuisines: 'Thai, Pan-Asian',
-      pic: '/images/images.jpeg4.jpeg'
-    }, {
-        name: 'Coding Cat Cafe',
-        city: 'Phoenix',
-        state: 'AZ',
-        cuisines: 'Coffee, Bakery',
-        pic: '/images/images.jpeg3.jpeg'
-    }]
     // res.render('places/index', { places }) 
   //  })
 
